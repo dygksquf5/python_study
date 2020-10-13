@@ -14,6 +14,6 @@ shuffle(users)
 
 winners = sample(users,4)
 
-print(" 당첨자 발 표 ! ");
-print("치킨 당 첨 자 :{0}".format(winners[0]) )
-print(" 커피당첨자 : {0}".format(winners[1:]) )
+print(" 당첨자 발 표 ! ")
+print("치킨 당 첨 자 :{0}".format(winners[0]))
+print(" 커피당첨자 : {0}".format(winners[1:]))
