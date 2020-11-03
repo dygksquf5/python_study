@@ -20,3 +20,5 @@ except ValueError:
 except BigNumberError as err:
     print("사용자 정의 예외처리 하기!! ")
     print(err)
+finally:
+    print("에러가 나던 나지않던 여부와 상관없이 무조건 마지막에 출력! ")
