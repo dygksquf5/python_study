@@ -41,7 +41,6 @@ yohan = FlyableAttackUnit("김요한", 45, "200", 30)
 yohan.fly(yohan.name, 4)
 
 
-
 firebat1 = AttackUnit("파이어벳", 50, 10)
 firebat1.attack(3)
 firebat1.damaged(20)
