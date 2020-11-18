@@ -14,6 +14,7 @@ class Solution:
 
     # 노드가 직접 바뀌긴 하지만, 반복구조로 스왑하여 푸는 형식... ( 좀더 이해가 필요함 ㅠㅠ )
     def swapPairs_2(self, head : ListNode) -> ListNode:
+        pass
 
 
 
