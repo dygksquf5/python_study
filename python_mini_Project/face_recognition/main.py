@@ -43,6 +43,7 @@ def overlay_transparent(background_img, img_to_overlay_t, x, y, overlay_size=Non
     except Exception:
         return background_img
 
+
 while True:
     # 프레임 단위로 끊어 읽기! 비디오 끝날 때 까지 계속 재생 시키고,.
     ret, img = cap.read()
@@ -70,7 +71,7 @@ while True:
     # 평균값으로 xy의 평균 구해서 센터를 구하자!
     center_x, center_y = np.mean(shape_2d, axis=0).astype(np.int)
 
-    result = overlay_transparent(img, overlay, center_x, center_y - 25 , overlay_size=(face_size, face_size))
+    result = overlay_transparent(img, overlay, center_x, center_y - 25, overlay_size=(face_size, face_size))
 
     # visualise
     img = cv2.rectangle(img, pt1=(face.left(), face.top()), pt2=(face.right(), face.bottom()), color=(255, 255, 255),
@@ -87,6 +88,6 @@ while True:
     # 센터 평균 구한걸 다시 그려보기! 빨간점!
     cv2.circle(img, center=tuple((center_x, center_y)), radius=2, color=[0, 0, 255], thickness=2, lineType=cv2.LINE_AA)
 
-    cv2.imshow("img", img)
+    # cv2.imshow("img", img)
     cv2.imshow("result", result)
     cv2.waitKey(1)
