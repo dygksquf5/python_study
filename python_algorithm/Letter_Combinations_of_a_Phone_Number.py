@@ -3,6 +3,7 @@ from typing import List
 
 def letterCombinations(digits: str) -> List[str]:
     def dfs(index, path):
+        # 끝까지 탐색 하면 백트래킹
         if len(path) == len(digits):
             result.append(path)
             return
