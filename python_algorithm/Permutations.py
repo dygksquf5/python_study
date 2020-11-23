@@ -35,3 +35,5 @@ def permute_itertools(nums: List[int]) -> List[List[int]]:
 
 
 print(permute_itertools([1,2,3,]))
+
+
