@@ -7,4 +7,4 @@ def sum_all(a):
     return answer
 
 
-print(sum_all(58))
+print(sum_all(1239))
