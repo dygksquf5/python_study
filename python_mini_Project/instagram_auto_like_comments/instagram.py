@@ -71,7 +71,7 @@ drive.implicitly_wait(10)
 
 input(" 잠만 멈춰 ㅠㅠ흑 : ")
 
-search_all = ["https://www.instagram.com/explore/tags/서울맛집/", "https://www.instagram.com/explore/tags/세종맛집/",
+search_all = ["https://www.instagram.com/explore/tags/서울맛집/", "https://www.instagram.com/explore/tags/제주도여행/",
               "https://www.instagram.com/explore/tags/세종카페/","https://www.instagram.com/explore/tags/대전카페/"]
 a = random.randint(1,5)
 drive.get(search_all[a])
@@ -81,13 +81,17 @@ sleep(5)
 
 
 def start_insta():
-    page_source = drive.page_source
 
-    beautiful = BeautifulSoup(page_source, "html.parser")
     # max_height = drive.execute_script("return document.body.scrollHeight")
 
     drive.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    sleep(3)
+    drive.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     sleep(4)
+    
+    page_source = drive.page_source
+
+    beautiful = BeautifulSoup(page_source, "html.parser")
 
     get_all = beautiful.findAll("div", {"class": "v1Nh3"})
 
@@ -115,6 +119,10 @@ def start_insta():
         # drive.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[3]/div/form').send_keys(message)
         # sleep(2)
         # drive.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[3]/div/form/button').click()
+
+    drive.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    sleep(4)
+
     start_insta()
 
 
