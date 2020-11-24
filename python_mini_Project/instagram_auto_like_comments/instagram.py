@@ -37,13 +37,13 @@ login.click()
 
 sleep(1)
 
-action.send_keys("dygksquf5@naver.com").perform()
+action.send_keys("dmsdlquf5@naver.com").perform()
 
 action = ActionChains(drive)
 
 (
     action.key_down(Keys.TAB).pause(1)
-        .send_keys("Wkdms123&").pause(3)
+        .send_keys("rla886400").pause(3)
         .perform()
 )
 drive.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
@@ -82,6 +82,8 @@ sleep(5)
 
 def start_insta():
 
+    global search_all, a
+    drive.get(search_all[a])
     # max_height = drive.execute_script("return document.body.scrollHeight")
 
     drive.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -112,7 +114,7 @@ def start_insta():
         random_time = random.randint(1, 8)
         sleep(random_time)
 
-        message = " 우와 ㅎㅎㅎ :) "
+        message = [" 우와 ㅎㅎㅎ :) ", "잘보고 가요 ! "]
 
         drive.find_element_by_xpath(
             '//*[@id="react-root"]/section/main/div/div[1]/article/div[3]/section[1]/span[1]/button').click()
