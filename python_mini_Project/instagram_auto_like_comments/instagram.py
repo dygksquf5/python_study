@@ -73,7 +73,7 @@ input(" 잠만 멈춰 ㅠㅠ흑 : ")
 
 search_all = ["https://www.instagram.com/explore/tags/서울맛집/", "https://www.instagram.com/explore/tags/제주도여행/",
               "https://www.instagram.com/explore/tags/세종카페/","https://www.instagram.com/explore/tags/대전카페/"]
-a = random.randint(1,5)
+a = random.randint(1,4)
 drive.get(search_all[a])
 
 # drive.implicitly_wait(10)
@@ -88,7 +88,7 @@ def start_insta():
     sleep(3)
     drive.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     sleep(4)
-    
+
     page_source = drive.page_source
 
     beautiful = BeautifulSoup(page_source, "html.parser")
