@@ -48,16 +48,32 @@ drive.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[1]/d
 sleep(1)
 
 for i in range(number):
-    drive.implicitly_wait(6)
-    drive.find_element_by_xpath('/html/body/div[5]/div[2]/div/article/div[3]/section[1]/span[1]/button/div').click()
-    sleep(1.5)
-    if i == 0:
-        drive.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/a').click()
-        sleep(1)
-    else:
-        drive.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/a[2]').click()
-        sleep(1)
-    print("좋아요 누른 횟수 : [{}]".format(i))
+    try:
+        drive.implicitly_wait(6)
+        drive.find_element_by_xpath('/html/body/div[5]/div[2]/div/article/div[3]/section[1]/span[1]/button/div').click()
+        sleep(1.5)
+        if i == 0:
+            drive.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/a').click()
+            sleep(1)
+        else:
+            drive.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/a[2]').click()
+            sleep(1)
+        print("좋아요 누른 횟수 : [{}]".format(i))
+    except Exception:
+        try:
+            drive.implicitly_wait(6)
+            drive.find_element_by_xpath("/html/body/div[4]/div[2]/div/article/div[3]/section[1]/span[1]/button").click()
+            sleep(1.5)
+            if i == 0:
+                drive.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a').click()
+                sleep(1)
+            else:
+                drive.find_element_by_xpath('/html/body/div[4]/div[1]/div/div/a[2]').click()
+                sleep(1)
+            print("좋아요 누른 횟수 : [{}]".format(i))
+        except Exception:
+            continue
+
 
 
 
