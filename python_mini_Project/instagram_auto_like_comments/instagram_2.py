@@ -48,6 +48,7 @@ drive.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[1]/d
 sleep(1)
 
 for i in range(number):
+    drive.implicitly_wait(6)
     drive.find_element_by_xpath('/html/body/div[5]/div[2]/div/article/div[3]/section[1]/span[1]/button/div').click()
     sleep(1.5)
     if i == 0:
