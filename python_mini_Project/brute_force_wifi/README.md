@@ -18,11 +18,11 @@
   
 # Also you need a dict for efficient Brute_Force ( in this case, I already Know the password, thus I made .txt file on my own for Brute Force
 
-  with(open("expect_password.txt", "w", encoding="utf8")) as text:
-    a = "twosome"
-    b = range(0,1000)
-    for i in b:
-        text.write("{0}{1} \n".format(a, i))
+      with(open("expect_password.txt", "w", encoding="utf8")) as text:
+        a = "twosome"
+        b = range(0,1000)
+        for i in b:
+            text.write("{0}{1} \n".format(a, i))
 
  
  # Finally you could find a profer password
