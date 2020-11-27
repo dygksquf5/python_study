@@ -13,8 +13,8 @@
 
 # This is command for MAC ( find SSID ) 
 
-  bash_command = "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s"
-  subprocess.call(bash_command.split())
+    bash_command = "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s"
+    subprocess.call(bash_command.split())
   
 # Also you need a dict for efficient Brute_Force ( in this case, I already Know the password, thus I made .txt file on my own for Brute Force
 
