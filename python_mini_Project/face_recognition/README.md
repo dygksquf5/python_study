@@ -28,3 +28,5 @@
 <img width="962" alt="Screenshot 2020-11-27 at 1 41 25 PM" src="https://user-images.githubusercontent.com/66229916/100411887-4f723d00-30b6-11eb-9438-476870680f3f.png">
 
 
+result = overlay_transparent(img, overlay, center_x, center_y - 25, overlay_size=(face_size, face_size))
+
