@@ -13,7 +13,7 @@ network = networks.anyObject()
 
 count = 0
 
-with open("/Users/yosuniiiii/python_study/python_mini_Project/expect_password.txt", "r") as wifi_password:
+with open("/Users/yosuniiiii/python_study/python_mini_Project/brute_force_wifi/expect_password.txt", "r") as wifi_password:
     for line in wifi_password.readlines():
         count += 1
         print("Trying... with : {}".format(str(line)))
