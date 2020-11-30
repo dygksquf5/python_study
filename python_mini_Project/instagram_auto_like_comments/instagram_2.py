@@ -42,6 +42,7 @@ action = ActionChains(drive)
 (
     action.key_down(Keys.TAB).pause(1)
     .send_keys("").pause(1)
+    # .send_keys("").pause(1)
     .perform()
 )
 drive.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
@@ -60,6 +61,7 @@ sleep(5)
 drive.find_element_by_xpath('//*[@id="react-root"]/section/main/article/div[1]/div/div/div[1]/div[1]/a/div').click()
 sleep(1)
 
+# 인스타가 두가지 형식의 xpath를 가지고 있어서, 어떤 xpath 인지 알아보기 위함.
 try:
     drive.find_element_by_xpath('/html/body/div[5]/div[1]/div/div/a')
     xpath = '/html/body/div[5]/div[1]/div/div/a'
@@ -73,17 +75,24 @@ except Exception:
 
     print(" 4번 div ")
 
-for i in range(number):
+
+for i in range(1, number):
     time_ori = 0
+    time_for_like = random.randint(1, 10)
+    if i % 300 == 0:
+        print("자동화 deny 에 대한 예방을 위해 5분간 멈추겠습니다.")
+        sleep(300)
+        print("5분이 끝났습니다. 다시 시작하겠습니다. ")
     try:
         start = time.time()
         time_ori += start
 
         drive.implicitly_wait(10)
         # 좋아요 누르는 path
+        sleep(time_for_like)
         drive.find_element_by_xpath(button).click()
         sleep(1.5)
-        if i == 0:
+        if i == 1:
             drive.find_element_by_xpath(xpath).click()
             sleep(1)
         else:
@@ -91,10 +100,12 @@ for i in range(number):
             sleep(1)
         print("좋아요 누른 횟수 : [{}]".format(i))
     except Exception:
-        finish = time.time() - time_ori
-        print("시간초과")
-        if finish >= 10:
-            print("시간초과로 인해 다음페이지로 넘기겠습니다.: [{}]".format(finish))
-            drive.find_element_by_xpath(xpath + '[2]').click()
-            sleep(1)
-        continue
+        try:
+            finish = time.time() - time_ori
+            if finish >= 10:
+                print("시간초과")
+                print("시간초과로 인해 다음페이지로 넘기겠습니다.: [{}]".format(finish))
+                drive.find_element_by_xpath(xpath + '[2]').click()
+                sleep(1)
+        except Exception:
+            continue
