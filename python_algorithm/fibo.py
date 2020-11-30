@@ -23,6 +23,8 @@ d = [0] * 100
 
 
 def fibo(x):
+    # 메모이제이션 썼을 때, 어떻게 구현되나 봐보장
+    print("f(" + str(x) + ")", end=" ")
     if x == 1 or x == 2:
         return 1
 
@@ -30,11 +32,11 @@ def fibo(x):
         return d[x]
 
     d[x] = fibo(x - 1) + fibo( x - 2)
-    print(d)
+    # print(d)
     return d[x]
 
 
-# print(fibo(99))
+print(fibo(6))
 
 
 # 반복문을 이용한 바텀업 형식
