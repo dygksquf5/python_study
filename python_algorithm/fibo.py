@@ -51,4 +51,3 @@ for i in range(3, number + 1):
 
 
 print(d_button[99])
-
