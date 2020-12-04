@@ -10,7 +10,10 @@ First of all, this is just for sending an email with Google automatically
       sleep(2)
 
 
-# after login , you can see an Auto-work sending email
+# After login , you can see an Auto-work sending email
+
+
+<img width="610" alt="Screenshot 2020-12-04 at 6 05 42 PM" src="https://user-images.githubusercontent.com/66229916/101144663-0133df80-365c-11eb-8cfa-eb98772183ab.png">
 
             
             write_email = WebDriverWait(drive, 8).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".T-I.T-I-KE.L3")))
@@ -31,7 +34,7 @@ First of all, this is just for sending an email with Google automatically
                     .perform()
             )
 
-<img width="610" alt="Screenshot 2020-12-04 at 6 05 42 PM" src="https://user-images.githubusercontent.com/66229916/101144663-0133df80-365c-11eb-8cfa-eb98772183ab.png">
+
 
 
 # As you can see, I've got an email from Gmail which Python sent.
