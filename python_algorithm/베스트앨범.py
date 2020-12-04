@@ -39,6 +39,12 @@
 genre = ["classic", "pop", "classic", "classic", "pop"]
 play = [500, 600, 150, 800, 2500]
 
+# 밑에 람다식 쉽게 이해할 수 있게 연습해봤당 !
+testtest = [[1,100],[2,100],[3,100],[4,100]]
+a = list(map(lambda y: y[0], testtest))
+b = sum(map(lambda y: y[0], testtest))
+print(a)
+
 
 def solution(genres, plays):
     answer = []
