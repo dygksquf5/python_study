@@ -6,6 +6,8 @@ Moreover, I'm still learning about Python and I will learn until I die :) lol
 
 [ 바로가기 미니 프로젝트 ](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project)
 
+  1) brute_force_wifi_hack(https://github.com/dygksquf5/python_study/tree/master/python_mini_Project/brute_force_wifi)
+
 
 
 # python_algoritm
