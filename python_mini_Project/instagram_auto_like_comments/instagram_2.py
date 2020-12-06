@@ -34,6 +34,7 @@ login.click()
 sleep(1)
 
 action.send_keys("dmsdlquf5@naver.com").perform()
+# action.send_keys("ga___nu").perform()
 
 action = ActionChains(drive)
 
@@ -41,8 +42,9 @@ action = ActionChains(drive)
 
 (
     action.key_down(Keys.TAB).pause(1)
-    .send_keys("").pause(1)
-    # .send_keys("").pause(1)
+    .send_keys("1q2w3e4r5t%%").pause(1)
+    # .send_keys("Ghkddbfl123&").pause(1)
+    # .send_keys("rksnWkdWkd@").pause(1)
     .perform()
 )
 drive.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
@@ -108,4 +110,7 @@ for i in range(1, number):
                 drive.find_element_by_xpath(xpath + '[2]').click()
                 sleep(1)
         except Exception:
+            print("time to rest due to an error")
+            sleep(300)
+            drive.find_element_by_xpath('/html/body/div[6]/div/div/div/div[2]/button[2]').click()
             continue
