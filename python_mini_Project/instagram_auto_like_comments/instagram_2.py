@@ -42,9 +42,7 @@ action = ActionChains(drive)
 
 (
     action.key_down(Keys.TAB).pause(1)
-    .send_keys("1q2w3e4r5t%%").pause(1)
-    # .send_keys("Ghkddbfl123&").pause(1)
-    # .send_keys("rksnWkdWkd@").pause(1)
+
     .perform()
 )
 drive.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
