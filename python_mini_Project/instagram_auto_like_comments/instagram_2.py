@@ -10,6 +10,7 @@ from time import sleep
 import time
 
 
+
 # class CheckTime:
 #     start = 0
 #
@@ -33,8 +34,8 @@ login.click()
 
 sleep(1)
 
-action.send_keys("dmsdlquf5@naver.com").perform()
-# action.send_keys("ga___nu").perform()
+action.send_keys("@naver.com").perform()
+
 
 action = ActionChains(drive)
 
@@ -42,7 +43,7 @@ action = ActionChains(drive)
 
 (
     action.key_down(Keys.TAB).pause(1)
-
+    .send_keys("").pause(1)
     .perform()
 )
 drive.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
