@@ -21,3 +21,59 @@ Due to the this reason, I would like to say that Using just Selenium would much 
 
 # 연속적인 like 버튼 클릭은 자동화 프로그램 방지 프로그램이 작동할 수 있음, 300번 클릭마다 300초씩 sleep 하여 블락 방지하기.
 <img width="550" alt="Screenshot 2020-11-30 at 12 52 15 PM" src="https://user-images.githubusercontent.com/66229916/100567047-f222f980-330a-11eb-9bad-72069ce02b5a.png">
+
+
+# You could also make as a GUI program through a tkinter.
+
+    def start():
+    try:
+        if len(id_insta.get()) == 0:
+            message.showerror("어어어ㅓㅓ", "아이디 입력하기!!! 제대로!")
+            return
+
+        if len(pw_insta.get()) == 0:
+            message.showerror("에러!!", "비번 빼먹었어!!!")
+            return
+
+        if len(search_insta.get()) == 0:
+            message.showerror("에러에러!!", "검색어 입력해야 검색을하지요!!!")
+            return
+     
+
+
+Here, you can find a start() function as a command.
+
+
+        # 실행프레임
+        frame_run = Frame(root)
+        frame_run.pack(fill="x", padx=5, pady=5)
+
+        btn_close = Button(frame_run, padx=5, pady=5, text="그만하기", width=12, command=root.quit)
+        btn_close.pack(side="right", padx=5, pady=5)
+
+        btn_start = Button(frame_run, padx=5, pady=5, text="시작", width=12, command=start)
+        btn_start.pack(side="right", padx=5, pady=5)
+
+  
+  
+# This is the GUI.
+
+<img width="302" alt="Screenshot 2020-12-08 at 7 54 21 PM" src="https://user-images.githubusercontent.com/66229916/101475038-3196b900-398f-11eb-9553-f285d6c3bb24.png">
+
+
+# This is a setup.py file for Mac app ( with py2app) 
+
+    from setuptools import setup
+
+    APP = ['yosuniiiii_insta_GUI.py']
+    DATA_FILES = []
+    OPTIONS = {
+        'argv_emulation' : True,
+    }
+
+    setup(
+        app=APP,
+        # data_file=DATA_FILES,
+        options={'py2app': OPTIONS},
+        setup_requires=['py2app']
+    )
