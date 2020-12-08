@@ -10,6 +10,9 @@ Moreover, I'm still learning about Python and I will learn until I die :) lol
    2) [face_recognition](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project/face_recognition)
    3) [instagram_auto_like_comments](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project/instagram_auto_like_comments)
    4) [selenium_actionchains](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project/selenium_actionchains)
+   5) [GUI_project](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project/GUI_project/GUI_for_images_project)
+   
+   
 
 
 
