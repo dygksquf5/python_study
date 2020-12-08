@@ -16,4 +16,4 @@ I made a merging images GUI programm through Python.
 # As a result, you could make an one image which was merged by this program.
 
 
-<img width="400" alt="image.png" src="https://user-images.githubusercontent.com/66229916/101473635-67d33900-398d-11eb-809f-477f9b5ab547.png">
+<img width="400" alt="Screenshot 2020-12-08 at 7 43 32 PM" src="https://user-images.githubusercontent.com/66229916/101473860-b41e7900-398d-11eb-939b-a6061e4dcd1d.png">
