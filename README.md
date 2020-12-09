@@ -1,5 +1,5 @@
-# This is the place that I'm studying 'Python'
-There is everything that I learned and studied.
+# PYTHON
+There are everything that I learned and studied.
 Moreover, I'm still learning about Python and I will learn until I die :) lol   
 
 # python_mini_project 
