@@ -18,4 +18,4 @@ Moreover, I'm still learning about Python and I will learn until I die :) lol
 
 # python_algoritm
 
-[ 바로가기 알고리즘 모음 ](https://github.com/dygksquf5/python_study/tree/master/python_algorithm)
+[ 바로가기 알고리즘 모음 ](https://github.com/dygksquf5/python_study/tree/master/Algorithm_python)
