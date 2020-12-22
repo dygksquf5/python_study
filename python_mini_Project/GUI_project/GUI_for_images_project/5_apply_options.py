@@ -95,7 +95,7 @@ def merge_image():
         if img_space > 0: # 이미지 간격 옵션 적용
             total_heights += (img_space * (len(images) - 1))
 
-        result_img = Image.new("RGB", (max_widths, total_heights), (255,255,255,255)) # 배경흰색
+        result_img = Image.new("RGB", (max_widths, total_heights), (000,000,000,000)) # 배경흰색
         y_offset = 0  # y 위치정보!!! 위치 계속 업뎃 해줘야 함
         # for img in images:
         #     result_img.paste(img, (0, y_offset))
