@@ -2,6 +2,7 @@
 
 import math
 
+
 def solution(brown, yellow):
     term = math.sqrt((brown+4)**2 /4 - 4 * (brown + yellow)) # math 대신 ** 0.5 도 가능
     w = ((brown + 4) / 2 + term) / 2

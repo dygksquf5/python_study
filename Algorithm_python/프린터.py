@@ -16,9 +16,6 @@ def solution(p, loc):
                 return answer
 
 
-
-
-
 print(solution([2,1,3,4], 2))
 
 
