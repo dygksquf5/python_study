@@ -1,7 +1,6 @@
 import hashlib
 
 
-
 text = '안녕하세요! 제 이름은 김요한 이라고 합니다 오늘도 열공을 해 봅시당 ㅎㅎ '
 encoded = text.encode()
 result = hashlib.sha256(encoded).hexdigest()
