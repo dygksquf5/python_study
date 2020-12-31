@@ -26,7 +26,10 @@ Thus, if you not call 'bixby', your computer will not any action at all.
                             print(command)
 
 
-# If you command like ' hey bixby, play Matt maltese ', after then Bixby says 'playing Matt maltese', then you can hear the beautiful voice of Matt maltese on Youtube. 
+# For example as a test. ( playing music)
+
+- If you command like ' hey bixby, play Matt maltese ', after then Bixby says 'playing Matt maltese', 
+  then you can hear the beautiful voice of Matt maltese on Youtube. 
 
                       if 'play' in command:
                           song = command.replace('play', '')
