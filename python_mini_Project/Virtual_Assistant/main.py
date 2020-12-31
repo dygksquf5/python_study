@@ -27,9 +27,11 @@ def get_command():
                 command = command.replace('bixby', '')
                 print(command)
 
+        return command
+
     except:
         pass
-    return command
+
 
 
 def run_bixby():
