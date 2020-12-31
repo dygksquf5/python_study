@@ -10,11 +10,11 @@
 
 # you can use this project as a personal virtual assistant as Alexa from Google or Siri from Apple. 
 
-It based on a Voice recognition which already trained by SpeechRecognition.
-Through this project, you can find videos on Youtube. 
-Moreover you can search something that you want to know on Google or Wikipedia. 
-I set the command as 'bixby' in order to call your Assistant.
-Thus, if you not call 'bixby', your computer will not any action at all.
+- It based on a Voice recognition which already trained by SpeechRecognition.
+- Through this project, you can find videos on Youtube. 
+- Moreover you can search something that you want to know on Google or Wikipedia. 
+- I set the command as 'bixby' in order to call your Assistant.
+  Thus, if you not call 'bixby', your computer will not any action at all.
 
                     with sr.Microphone() as source:
                         print(" listening ... ")
