@@ -1,4 +1,9 @@
 import copy
+import itertools
+
+# 재귀함수로 구현해도 되지만 간단하게 모듈 사용해서 이렇게 구현해도 같은 경우의 수를 도출해낸다.
+tem = [' ', '+', '-']
+print(len(list(itertools.product(tem,repeat=6)))) # 729 개 ! 사실 같음
 
 
 def recursive(array, n):
@@ -26,6 +31,7 @@ n = 7
 recursive([], n -1 )
 
 integers = [i for i in range(1, n+1)]
+print(len(operator_list))
 
 for operator in operator_list:
     string = ''
