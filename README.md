@@ -2,7 +2,7 @@
 There are everything that I learned and studied.
 Moreover, I'm still learning about Python and I will learn until I die :) lol   
 
-# python_mini_project 
+# Python mini projects 
 
 [ 바로가기 미니 프로젝트 ](https://github.com/dygksquf5/python_study/tree/master/python_mini_Project)
 
@@ -17,7 +17,7 @@ Moreover, I'm still learning about Python and I will learn until I die :) lol
 
 
 
-# python_algoritm
+# python algoritms
 
 [ 바로가기 알고리즘 모음 ](https://github.com/dygksquf5/python_study/tree/master/Algorithm_python)
 
