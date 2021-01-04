@@ -22,7 +22,7 @@ class Solution:
             self.longest = max(self.longest, left + right + 2)
             # 상태값
             return max(left, right) + 1
-        
+
         dfs(root)
         return self.longest
 
