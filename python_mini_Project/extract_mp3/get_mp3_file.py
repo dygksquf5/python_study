@@ -1,9 +1,8 @@
 from __future__ import unicode_literals
 import youtube_dl
-import youtube_dl.utils
+# import youtube_dl.utils
 import os
-import certifi
-
+# you need to install about ffmpeg on Homebrew :)
 
 class Download(object):
     def __init__(self, url):
@@ -12,6 +11,7 @@ class Download(object):
         self.song()
 
     def song(self):
+        # youtube_dl.utils.std_headers['Referer'] = "https://www.youtube.com/"
         opts = {
             'verbose': True,
             'fixup': 'detect_or_warn',
@@ -23,9 +23,9 @@ class Download(object):
             }],
             'extractaudio': True,
             'outtmpl': self.save_path + '/%(title)s.%(ext)s',
-            'noplaylist': True
+            'noplaylist': True,
+            'nocheckcertificate': True,  # ssl 문제가 떠서 ca 체크 안하게 하기.
         }
-        youtube_dl.utils.std_headers['Referer'] = "https://www.google.com/"
         ydl = youtube_dl.YoutubeDL(opts)
         ydl.download([self.url])
 

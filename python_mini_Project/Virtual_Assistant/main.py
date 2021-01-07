@@ -62,7 +62,6 @@ def run_bixby():
         talk(finding)
     elif 'find ' in command:
         info = command.replace('find', '')
-
         finding = pywhatkit.search(info)
         print(finding)
         talk(finding)
