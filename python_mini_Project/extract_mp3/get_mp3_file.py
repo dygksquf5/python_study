@@ -53,9 +53,8 @@ def start():
                 message.showinfo("다운로드시작", "잠시만 기다려주세용")
                 ydl.download([self.url])
                 message.showinfo("알림", "작업이 완료되었습니다! ")
-            except:
-                message.showinfo("경고", "작업이 완료되지 못했습니다. 잠시후 다시 시도 해 주세용! ")
-
+            except Exception as err:
+                message.showinfo("경고", "작업이 완료되지 못했습니다. 잠시후 다시 시도 해 주세용!{0}".format(err))
 
     # 저장경로  확인하는 구간
     if len(txt_dest_path.get()) == 0:
