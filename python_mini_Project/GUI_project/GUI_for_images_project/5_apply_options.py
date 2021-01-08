@@ -61,7 +61,7 @@ def merge_image():
         elif img_space == "넓게":
             img_space = 90
         else:
-            img_space == 0
+            img_space = 0
 
         # 포맷
         img_format = cmb_format.get().lower() # PNG ,JPG 등 값 받아와서 소문자로 변경
