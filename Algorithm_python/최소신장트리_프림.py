@@ -1,5 +1,6 @@
 import heapq
 import collections
+import time
 
 
 edges = [
@@ -37,12 +38,10 @@ def prim(start_node, edges):
             answer.append((weight, n1, n2))
 
             for edge in adj_edges[n2]:
-                heapq.heappush(candidate_edge_list, edge)
+                if edge[2] not in connected_nodes:
+                    heapq.heappush(candidate_edge_list, edge)
 
     return answer
-
-
-
 
 
 
