@@ -8,7 +8,7 @@ bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/')
 def index():
-    question_list = Question.query.order_by(Question.create_date.desc())
+    # question_list = Question.query.order_by(Question.create_date.desc())
     return redirect(url_for('question._list'))
 
 #
