@@ -4,6 +4,8 @@ from werkzeug.utils import redirect
 from .. import db
 
 from pybo.models import Question
+from pybo.views.auth_views import login_required
+
 
 from ..forms import QuestionForm, AnswerForm
 
@@ -26,6 +28,7 @@ def detail(question_id):
 
 
 @bp.route('/create/', methods=('GET', 'POST'))
+@login_required
 def create():
     form = QuestionForm()
     if request.method == 'POST' and form.validate_on_submit():
