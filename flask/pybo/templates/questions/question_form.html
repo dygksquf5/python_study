@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pd-2"> 질문등록 </h5>
+    <form method="post" class="post-form my-3">
+        {{ form.csrf_token }}
+        <!--        오류표시 부분 -->
+        {% for field, error in form.errors.items() %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ form[field].label }}</strong>: {{ ', '.join(error) }}
+        </div>
+        {% endfor %}
+
+<!--        html 자동 생성 하는 방식 -->
+<!--        {{ form.subject.label }}-->
+<!--        {{ form.subject(class="form-control") }}-->
+
+<!--        {{ form.content.label }}-->
+<!--        {{ form.content(class="form-control") }}-->
+        <div class="form-group">
+            <label for="subject"> 제목 </label>
+            <input type="text" class="form-control" name="subject" id="subject" value="{{ form.subject.data or '' }}">
+        </div>
+        <div class="from-group">
+            <label for="content">내용</label>
+            <textarea class="form-control" name="content" id="content" rows="10">{{ form.content.data or '' }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"> 저장하기</button>
+    </form>
+</div>
+{% endblock %}
