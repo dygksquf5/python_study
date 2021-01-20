@@ -1,7 +1,11 @@
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+
+from flaskext.markdown import Markdown
+
 from sqlalchemy import MetaData
+
 
 import config
 
@@ -32,12 +36,13 @@ def create_app():
     from . import models
 
     # 블루프린트
-    from .views import main_views, question_views, answer_views, auth_views, comment_views
+    from .views import main_views, question_views, answer_views, auth_views, comment_views, vote_views
     app.register_blueprint(main_views.bp)
     app.register_blueprint(question_views.bp)
     app.register_blueprint(answer_views.bp)
     app.register_blueprint(auth_views.bp)
     app.register_blueprint(comment_views.bp)
+    app.register_blueprint(vote_views.bp)
 
 
     # 필터
@@ -47,5 +52,9 @@ def create_app():
     # @app.route('/')
     # def hello_world():
     #     return 'this is very first'
+
+    # markdown
+    Markdown(app, extensions=['nl2br', 'fenced_code'])
+    # nl2br 은 줄바꿈 문자를 <br> 로 바꿔줌,
 
     return app
